@@ -15,12 +15,14 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.dbfinance.nav.NavGraph
 import com.example.dbfinance.ui.theme.DbFinanceTheme
+import com.example.dbfinance.util.PengeluaranViewModel
 import com.example.dbfinance.util.SharedViewModel
 
 class MainActivity : ComponentActivity() {
 
     private lateinit var navController: NavHostController
     private val sharedViewModel: SharedViewModel by viewModels()
+    private val pengeluaranViewModel: PengeluaranViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +36,8 @@ class MainActivity : ComponentActivity() {
                     navController = rememberNavController()
                     NavGraph(
                         navController = navController,
-                        sharedViewModel = sharedViewModel
+                        sharedViewModel = sharedViewModel,
+                        pengeluaranViewModel = pengeluaranViewModel
                     )
                 }
             }

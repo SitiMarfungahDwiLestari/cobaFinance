@@ -6,14 +6,18 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.dbfinance.screen.AddDataScreen
+import com.example.dbfinance.screen.AddPengeluaran
 import com.example.dbfinance.screen.GetDataScreen
 import com.example.dbfinance.screen.Home
+import com.example.dbfinance.util.PengeluaranViewModel
 import com.example.dbfinance.util.SharedViewModel
+import com.example.dbfinance.util.pengeluaran
 
 @Composable
 fun NavGraph(
     navController: NavHostController,
-    sharedViewModel: SharedViewModel
+    sharedViewModel: SharedViewModel,
+    pengeluaranViewModel: PengeluaranViewModel
 ) {
     NavHost(
         navController = navController,
@@ -43,6 +47,15 @@ fun NavGraph(
             AddDataScreen(
                 navController = navController,
                 sharedViewModel = sharedViewModel
+            )
+        }
+        //add Pengeluaran
+        composable(
+            route = Screens.AddPengeluaran.route
+        ) {
+            AddPengeluaran(
+                navController = navController,
+                pengeluaranViewModel = pengeluaranViewModel
             )
         }
     }

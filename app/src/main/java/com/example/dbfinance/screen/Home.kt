@@ -34,7 +34,7 @@ fun Home(
                 navController.navigate(route = Screens.GetDataScreen.route)
             }
         ) {
-            Text(text = "Get User Data")
+            Text(text = "Get All Data")
         }
 
         // add user data Button
@@ -44,7 +44,16 @@ fun Home(
                 navController.navigate(route = Screens.AddDataScreen.route)
             }
         ) {
-            Text(text = "Add User Data")
+            Text(text = "Add Pemasukan")
+        }
+
+        OutlinedButton(
+            modifier = Modifier.fillMaxWidth(),
+            onClick = {
+                navController.navigate(route = Screens.AddPengeluaran.route)
+            }
+        ) {
+            Text(text = "Add Pengeluaran")
         }
     }
 }
