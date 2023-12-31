@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "250444853223",
+    "project_id": "dbfinance-6c88d",
+    "storage_bucket": "dbfinance-6c88d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250444853223:android:54a59dd13f9fa5b5ab1742",
+        "android_client_info": {
+          "package_name": "com.example.dbfinance"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnumzt_FQloGs5lxZbsl3mqq10iVuIo8A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
